@@ -260,6 +260,17 @@ class Client
     }
 
     /**
+     * Returns url of the public file in the B2 bucket.
+     *
+     * @param string    $fileName
+     * @return string
+     */
+    public function downloadByname($fileName, $bucketName)
+    {
+        return $this->downloadUrl.'/file/'.$bucketName.'/'.$fileName;
+    }
+
+    /**
      * Retrieve a collection of File objects representing the files stored inside a bucket.
      *
      * @param array $options
